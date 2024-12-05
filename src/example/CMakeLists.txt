@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(OpenCV REQUIRED)
 
 ## Find Intel RealSense
+set(CMAKE_PREFIX_PATH "/opt/librealsense/lib/cmake/realsense2" ${CMAKE_PREFIX_PATH})
 find_package(realsense2 REQUIRED)
 
 catkin_package(
