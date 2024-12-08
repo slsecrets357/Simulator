@@ -1,0 +1,10 @@
+FROM ros-ubuntu:latest
+
+WORKDIR /Simulator
+
+COPY . .
+
+RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && \
+    catkin_make --pkg utils && \
+    catkin_make && \
+    cp /Simulator/setup.bash /Simulator/devel/"

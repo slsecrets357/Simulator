@@ -1,0 +1,7 @@
+FROM simulator-f1tenth:latest
+
+WORKDIR /Simulator
+
+SHELL ["/bin/bash", "-c"]
+
+COPY . .

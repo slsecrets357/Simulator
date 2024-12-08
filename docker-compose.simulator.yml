@@ -1,0 +1,28 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.simulator
+    container_name: simulator
+    hostname: ros-simulator
+    ports:
+      - 11313:11313
+    runtime: nvidia
+    devices:
+      - "/dev/dri:/dev/dri"
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - ROS_HOSTNAME=ros-simulator
+      - ROS_MASTER_URI=http://ros-simulator:11313
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    networks:
+      - mynetwork
+    stdin_open: true
+    tty: true
+
+networks:
+  mynetwork:
+    driver: bridge

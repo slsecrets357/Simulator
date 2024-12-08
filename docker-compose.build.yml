@@ -1,0 +1,6 @@
+services:
+  f1tenth:
+    build:
+      context: .
+      dockerfile: Dockerfile.build
+    container_name: ros-simulator

@@ -18,6 +18,7 @@ Starter code from https://github.com/ECC-BFMC/Simulator
 ### ROS
 #### Installation:
 http://www.autolabor.com.cn/book/ROSTutorials/chapter1/12-roskai-fa-gong-ju-an-zhuang/124-an-zhuang-ros.html
+If you are not using ubuntu, you can use docker. Navigate to ROS folder to build the base ros container image (instructions in ./ROS/README.md).
 
 ## Build
 
